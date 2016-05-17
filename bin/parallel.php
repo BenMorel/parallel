@@ -1,3 +1,4 @@
+#!/usr/bin/env
 <?php
 
 use Symfony\Component\Process\Process;
