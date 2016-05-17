@@ -1,19 +1,8 @@
-#!/usr/bin/env
 <?php
 
 use Symfony\Component\Process\Process;
 
-$autoloadFiles = [
-    __DIR__ . '/../vendor/autoload.php', // for development
-    __DIR__ . '/../../../autoload.php'   // when installed as a composer package
-];
-
-foreach ($autoloadFiles as $autoloadFile) {
-    if (file_exists($autoloadFile)) {
-        require_once $autoloadFile;
-        break;
-    }
-}
+require 'vendor/autoload.php';
 
 $script = array_shift($argv);
 
