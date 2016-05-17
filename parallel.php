@@ -32,7 +32,7 @@ foreach ($checks as $name => $value) {
 $rate        = (int) $rate;
 $concurrency = (int) $concurrency;
 
-$command = implode(' ', $argv);
+$command = implode(' ', array_map('escapeshellarg', $argv));
 
 $sleepTime = (int) (1000000 / $rate);
 
