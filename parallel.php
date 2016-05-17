@@ -17,6 +17,21 @@ if ($argc < 4) {
 $rate = array_shift($argv);
 $concurrency = array_shift($argv);
 
+$checks = [
+    'rate'        => $rate,
+    'concurrency' => $concurrency
+];
+
+foreach ($checks as $name => $value) {
+    if (! ctype_digit($value) || $value == '0') {
+        printf('%s is not a valid value for %s.' . PHP_EOL, $value, $name);
+        exit(1);
+    }
+}
+
+$rate        = (int) $rate;
+$concurrency = (int) $concurrency;
+
 $command = implode(' ', $argv);
 
 $sleepTime = (int) (1000000 / $rate);
