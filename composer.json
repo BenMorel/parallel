@@ -1,0 +1,10 @@
+{
+  "name": "benmorel/parallel",
+  "description": "Command-line script to run commands in parallel at a fixed rate",
+  "type": "library",
+  "license": "MIT",
+  "bin": ["bin/parallel.php"],
+  "require": {
+    "symfony/process": "3.*"
+  }
+}
