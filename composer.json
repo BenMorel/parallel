@@ -4,7 +4,7 @@
   "type": "library",
   "license": "MIT",
   "bin": ["bin/parallel.php"],
-  "require": {
+  "require-dev": {
     "symfony/process": "3.*"
   }
 }
