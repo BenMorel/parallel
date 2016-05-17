@@ -8,6 +8,6 @@
     }
   ],
   "main": "parallel.php",
-  "output": "build/parallel.phar",
+  "output": "bin/parallel.phar",
   "stub": true
 }

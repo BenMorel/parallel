@@ -3,7 +3,7 @@
   "description": "Command-line script to run commands in parallel at a fixed rate",
   "type": "library",
   "license": "MIT",
-  "bin": ["bin/parallel.php"],
+  "bin": ["bin/parallel.phar"],
   "require-dev": {
     "symfony/process": "3.*"
   }
