@@ -24,7 +24,7 @@ Parallel.phar can start 5 instances of your script every second, regardless of h
 
 ## How to use it?
 
-Ensure that you have PHP installed, and download [parallel.phar](https://github.com/BenMorel/parallel/blob/master/bin/parallel.phar?raw=true).
+Ensure that you have PHP installed, and download [parallel.phar](https://github.com/BenMorel/parallel/blob/0.1.0/bin/parallel.phar?raw=true).
 Alternatively, you can install it with Composer.
 
 Then run:
