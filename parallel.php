@@ -2,7 +2,7 @@
 
 use Symfony\Component\Process\Process;
 
-require 'vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 $script = array_shift($argv);
 
