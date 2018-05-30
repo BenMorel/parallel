@@ -2,6 +2,9 @@
 
 A command-line script to run commands in parallel at a fixed rate.
 
+[![Latest Stable Version](https://poser.pugx.org/benmorel/parallel/v/stable)](https://packagist.org/packages/benmorel/parallel)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
+
 ## What is it?
 
 Ever needed to execute a command `n` times per second, allowing these commands to run simultaneously if the first command
