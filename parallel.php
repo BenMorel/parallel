@@ -38,7 +38,7 @@ $sleepTime = (int) (1000000 / $rate);
 
 $processes = [];
 
-$filter = function(Process $process) {
+$filter = static function(Process $process) {
     return $process->isRunning();
 };
 
@@ -48,7 +48,7 @@ for (;;) {
 
     if (count($processes) < $concurrency) {
         $process = new Process($command);
-        $process->start(function($type, $data) {
+        $process->start(static function($type, $data) {
             if ($type === Process::OUT) {
                 fwrite(STDOUT, $data);
             } elseif ($type === Process::ERR) {
