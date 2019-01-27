@@ -17,24 +17,31 @@ if ($argc < 4) {
 $rate = array_shift($argv);
 $concurrency = array_shift($argv);
 
-$checks = [
-    'rate'        => $rate,
-    'concurrency' => $concurrency
-];
-
-foreach ($checks as $name => $value) {
-    if (! ctype_digit($value) || $value == '0') {
-        printf('%s is not a valid value for %s.' . PHP_EOL, $value, $name);
-        exit(1);
-    }
+if (preg_match('/^[0-9]+(?:\.[0-9]+)?$/', $rate) !== 1) {
+    printf('%s is not a valid value for rate.' . PHP_EOL, $rate);
 }
 
-$rate        = (int) $rate;
+if (preg_match('/^[0-9]+$/', $concurrency) !== 1) {
+    printf('%s is not a valid value for concurrency.' . PHP_EOL, $concurrency);
+    exit(1);
+}
+
+$rate        = (float) $rate;
 $concurrency = (int) $concurrency;
+
+if ($rate === 0.0) {
+    echo 'rate cannot be zero.', PHP_EOL;
+    exit(1);
+}
+
+if ($concurrency === 0) {
+    echo 'concurrency cannot be zero.', PHP_EOL;
+    exit(1);
+}
 
 $command = implode(' ', array_map('escapeshellarg', $argv));
 
-$sleepTime = (int) (1000000 / $rate);
+$sleepTime = (int) (1000000.0 / $rate);
 
 $processes = [];
 
