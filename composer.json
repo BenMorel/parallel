@@ -4,7 +4,7 @@
   "type": "library",
   "license": "MIT",
   "bin": ["bin/parallel.phar"],
-  "require-dev": {
-    "symfony/process": "3.*"
+  "require": {
+    "symfony/process": "^5.4"
   }
 }

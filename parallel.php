@@ -39,7 +39,7 @@ if ($concurrency === 0) {
     exit(1);
 }
 
-$command = implode(' ', array_map('escapeshellarg', $argv));
+$command = $argv;
 
 $sleepTime = (int) (1000000.0 / $rate);
 

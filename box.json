@@ -1,13 +1,10 @@
 {
-  "chmod": "0755",
   "finder": [
     {
       "name": "*.php",
-      "exclude": ["Tests"],
       "in": "vendor"
     }
   ],
   "main": "parallel.php",
-  "output": "bin/parallel.phar",
-  "stub": true
+  "output": "bin/parallel.phar"
 }
