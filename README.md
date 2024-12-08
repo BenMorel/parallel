@@ -1,3 +1,6 @@
+> [!NOTE]  
+> This repository has been archived. Please refer to [benmorel/every](https://github.com/benmorel/every) as a replacement candidate.
+
 # Parallel
 
 A command-line script to run commands in parallel at a fixed rate.
